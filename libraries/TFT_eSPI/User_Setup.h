@@ -44,7 +44,7 @@
 //#define HX8357D_DRIVER
 //#define ILI9481_DRIVER
 //#define ILI9486_DRIVER
-//#define ILI9488_DRIVER     // WARNING: Do not connect ILI9488 display SDO to MISO if other devices share the SPI bus (TFT SDO does NOT tristate when CS is high)
+#define ILI9488_DRIVER     // WARNING: Do not connect ILI9488 display SDO to MISO if other devices share the SPI bus (TFT SDO does NOT tristate when CS is high)
 //#define ST7789_DRIVER      // Full configuration option, define additional parameters below for this display
 //#define ST7789_2_DRIVER    // Minimal configuration option, define additional parameters below for this display
 //#define R61581_DRIVER
@@ -68,14 +68,14 @@
 
 // For M5Stack ESP32 module with integrated ILI9341 display ONLY, remove // in line below
 
-#define M5STACK
-#define TFT_MISO 19
-#define TFT_MOSI 23
-#define TFT_SCLK 18
-#define TFT_CS   14  // Chip select control pin
-#define TFT_DC   27  // Data Command control pin
-#define TFT_RST  33  // Reset pin (could connect to Arduino RESET pin)
-#define TFT_BL   32  // LED back-light (required for M5Stack)
+// #define M5STACK
+// #define TFT_MISO 19
+// #define TFT_MOSI 23
+// #define TFT_SCLK 18
+// #define TFT_CS   14  // Chip select control pin
+// #define TFT_DC   27  // Data Command control pin
+// #define TFT_RST  33  // Reset pin (could connect to Arduino RESET pin)
+// #define TFT_BL   32  // LED back-light (required for M5Stack)
 
 // For ST7789, ST7735 and ILI9163 ONLY, define the pixel width and height in portrait orientation
 // #define TFT_WIDTH  80
@@ -196,11 +196,11 @@
 // The hardware SPI can be mapped to any pins
 
 //#define TFT_MISO 19
-//#define TFT_MOSI 23
-//#define TFT_SCLK 18
-//#define TFT_CS   15  // Chip select control pin
-//#define TFT_DC    2  // Data Command control pin
-//#define TFT_RST   4  // Reset pin (could connect to RST pin)
+#define TFT_MOSI 23
+#define TFT_SCLK 18
+#define TFT_CS   5  // Chip select control pin
+#define TFT_DC  17  // Data Command control pin
+#define TFT_RST   16  // Reset pin (could connect to RST pin)
 //#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST
 
 //#define TOUCH_CS 21     // Chip select pin (T_CS) of touch screen
